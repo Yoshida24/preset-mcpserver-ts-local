@@ -52,7 +52,11 @@ Cursor > Preference > Settings > Feature > MCP を開き、以下の設定を追
 }
 ```
 
-Cursor Agent で「Hiの文字列長を教えて」のように使用します。以下のようにMCPサーバの呼び出しが行われれば正常に動作しています。
+MCPサーバが認識されると以下のように表示されます。認識されていない場合、依存性が解決されていない、denoコマンドがCursorから実行できていない、などの不具合にぶつかっている可能性があるため、セットアップ手順を見直してください。
+
+![img](docs/img/mcp-demo-cursor.png)
+
+Cursor Agent で「"Hi"の文字列長を教えて」のように使用します。以下のようにMCPサーバの呼び出しが行われれば正常に動作しています。
 
 ![img](docs/img/mcp-demo-cursor.png)
 
