@@ -2,7 +2,7 @@ import { FastMCP } from "npm:fastmcp";
 import { z } from "npm:zod";
 
 const server = new FastMCP({
-    name: "Sample FastMCP Server",
+    name: "Preset MCP Server TS Local",
     version: "0.0.0"
 });
 
@@ -27,7 +27,6 @@ server.addTool({
         string: z.string()
     }),
     execute: (params) => {
-        // 一般的な文字列からスペースと英数を考慮してスネークケースに
         const snakeCase = params.string.replace(/([A-Z])/g, '_$1')
             .replace(/\s+/g, '_')
             .toLowerCase();
