@@ -41,6 +41,13 @@ asdf global deno 2.2.9
 npm install
 ```
 
+環境変数ファイルをコピーして設定します。
+
+```bash
+cp .env.tmpl .env
+# .envを編集
+```
+
 Cursor > Preference > Cursor Settings > MCP を開き、以下の設定を追加します。  
 `/path`は`index.ts`の場所に応じて変更します。
 
@@ -53,7 +60,10 @@ Cursor > Preference > Cursor Settings > MCP を開き、以下の設定を追加
                 "run",
                 "--allow-all",
                 "/path/src/index.ts"
-            ]
+            ],
+            "env": {
+                "YOUR_ENV": "MyEnv"
+            },
         }
     }
 }
@@ -120,6 +130,10 @@ asdf global deno 2.2.9
 
 Cursor, VSCodeでのDenoの開発環境構築を行うには、以下を参考にセットアップします。  
 - [Zenn.dev | VSCodeでDeno開発する前の準備](https://zenn.dev/wnr/articles/4a5be900e26e33)
+
+### dotenvxを使って環境変数を追加する
+
+`dotenvx set HELLO World`
 
 # 参考
 - https://zenn.dev/heavenosk/articles/fastmcp-simple-server

@@ -36,6 +36,19 @@ server.addTool({
     }
 });
 
+server.addTool({
+    name: "Add Enviroment as Prefix",
+    description: "Add enviroment string as prefix to given string",
+    parameters: z.object({
+        string: z.string()
+    }),
+    execute: (params) => {
+        const envKey = "YOUR_ENV";
+        const envValue = Deno.env.get(envKey);
+        return Promise.resolve(envValue + params.string);
+    }
+});
+
 server.start({
     transportType: "stdio"
 });
