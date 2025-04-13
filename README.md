@@ -10,6 +10,8 @@
 ホストマシン上で動作するMCPサーバーを開発するテンプレートです。  
 fastmcp + TypeScriptで開発します。
 
+![img](docs/img/mcp-demo-cursor.png)
+
 ## コンセプト
 - TypeScriptベースでの開発をサポートします。
 - Denoを使ってTypeScriptのセットアップを省力化します。
