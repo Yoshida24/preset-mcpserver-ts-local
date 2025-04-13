@@ -41,12 +41,14 @@ asdf global deno 2.2.9
 npm install
 ```
 
-環境変数ファイルをコピーして設定します。
+(optional)環境変数ファイルをコピーして設定します。
 
 ```bash
 cp .env.tmpl .env
 # .envを編集
 ```
+
+> `.env` は開発用に使うファイルであり、設定しなくてもMCPから実行する際には動作に支障はありません。
 
 Cursor > Preference > Cursor Settings > MCP を開き、以下の設定を追加します。  
 `/path`は`index.ts`の場所に応じて変更します。
