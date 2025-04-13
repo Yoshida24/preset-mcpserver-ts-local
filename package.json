@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "deno run --env-file=.env --allow-all src/index.ts",
+        "dev": "fastmcp inspect src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
