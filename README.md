@@ -10,9 +10,9 @@
 ホストマシン上で動作するMCPサーバーを開発するテンプレートです。  
 fastmcp + TypeScriptで開発します。
 
-### コンセプト
+## コンセプト
 - TypeScriptベースでの開発をサポートします。
-- Denoを使ってTypeScriptを実行することで、TypeScriptの面倒なセットアップをスキップしてMCPの開発環境を構築します。
+- Denoを使ってTypeScriptのセットアップを省力化します。
 
 ## 前提
 
@@ -76,8 +76,6 @@ Cursor Agent で「"Hi"の文字列長を教えて」のように使用します
 ```ts
 import { FastMCP } from "npm:fastmcp";
 import { z } from "npm:zod";
-
-/* 中略 */
 
 /* 中略 */
 
