@@ -72,21 +72,20 @@ Cursor Agent で「"Hi"の文字列長を教えて」のように使用します
 import { FastMCP } from "npm:fastmcp";
 import { z } from "npm:zod";
 
-const server = new FastMCP({
-    name: "Sample FastMCP Server",
-    version: "0.0.0"
-});
+/* 中略 */
 
 server.addTool({
-    name: "Count String Length",
-    description: "Count the length of a string",
+    name: "Convert To Snake Case",
+    description: "Convert a string to snake case",
     parameters: z.object({
         string: z.string()
     }),
     execute: (params) => {
-        const length = params.string.length;
+        const snakeCase = params.string.replace(/([A-Z])/g, '_$1')
+            .replace(/\s+/g, '_')
+            .toLowerCase();
         return Promise.resolve(JSON.stringify({
-            length
+            snakeCase
         }));
     }
 });
